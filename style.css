@@ -86,13 +86,21 @@ p {
     }
 
 /*  this is for the flexbox container on the mainpage  */
-    .container-maincontent {
+        .container-maincontent {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            padding: 0 500px;}
+            flex-direction: column; /* Arrange children vertically */
+            align-items: center; /* Center children horizontally */
+            padding: 20px; /* Add padding to the container */
+        }
+         .container-maincontent {
+                flex-direction: row; /* Arrange children horizontally */
+                justify-content: center; /* Center children horizontally */
+            }
+
+            .container-maincontent > * {
+                margin: 0 10px; /* Add margin between flex items */
+                flex: 1; /* Distribute remaining space equally among flex items */
+            }
 
             .hamburger-menu{
                 font-weight: bold;
