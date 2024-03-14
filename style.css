@@ -1,7 +1,4 @@
-
-*/
-
-*,
+*/ *,
 ::after,
 ::before {
   margin: 0;
@@ -9,9 +6,9 @@
   box-sizing: border-box;
 }
 body {
-font-family: "Montserrat", sans-serif;
-  background: #f0f0f0; 
-  color: #333; 
+  font-family: "Montserrat", sans-serif;
+  background: #f0f0f0;
+  color: #333;
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -46,6 +43,7 @@ h4 {
 p {
   margin-bottom: 1.25rem;
   color: black;
+  padding: 5px;
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -72,40 +70,39 @@ p {
 }
 /* here is for the iframe video on the project page*/
 .video-container {
-        width: 800px; /* Adjust width as needed */
-        height: 450px; /* Adjust height as needed */
-      }
-    
-    .video-container {
-      width: 100%;
-    }
+  width: 800px; /* Adjust width as needed */
+  height: 450px; /* Adjust height as needed */
+}
 
-    iframe {
-      width: 100%;
-      height: 100%;
-    }
+.video-container {
+  width: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
 
 /*  this is for the flexbox container on the mainpage  */
-        .container-maincontent {
-            display: flex;
-            flex-direction: column; /* Arrange children vertically */
-            align-items: center; /* Center children horizontally */
-            padding: 20px; /* Add padding to the container */
-        }
-         .container-maincontent {
-                flex-direction: row; /* Arrange children horizontally */
-                justify-content: center; /* Center children horizontally */
-            }
+.container-maincontent {
+  display: flex;
+  flex-direction: column; /* Arrange children vertically */
+  align-items: left; /* Center children horizontally */
+  padding: 20px; /* Add padding to the container */
+}
+.container-maincontent {
+  justify-content: center; /* Center children horizontally */
+}
 
-            .container-maincontent > * {
-                margin: 0 10px; /* Add margin between flex items */
-                flex: 1; /* Distribute remaining space equally among flex items */
-            }
+.container-maincontent > * {
+  margin: 0 10px; /* Add margin between flex items */
+  flex: 1; /* Distribute remaining space equally among flex items */
+}
 
-            .hamburger-menu{
-                font-weight: bold;
-                color: rgb(57, 55, 55);
-            }
+.hamburger-menu {
+  font-weight: bold;
+  color: rgb(57, 55, 55);
+}
 
 /*  global classes */
 
@@ -136,8 +133,8 @@ Navbar
 ===============
 */
 nav {
-background: #ffffff;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .nav-header {
   display: flex;
@@ -155,7 +152,7 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 /* THIS CONTROLS THE HAMBURGER ICONS COLOR WHEN YOU HOVER OVER IT CHANGES TO BLACK AND IT ALSO ROTATES THE ICON TO VERTICAL LINES*/
 .nav-toggle:hover {
-   color: black; 
+  color: black;
   transform: rotate(90deg);
 }
 .logo {
@@ -163,26 +160,27 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 /* THIS CONTROLS the color of the links in the header section*/
 .links a {
-  color: black; 
+  color: black;
   font-size: 1rem;
   text-transform: capitalize;
-  letter-spacing: 1px; 
+  letter-spacing: 1px;
   display: block;
   padding: 0.5rem 1rem;
   transition: all 0.3s ease;
 }
 .links a:hover {
-  background-color: rgba(128, 128, 128, 0.328); 
-  color:green;
+  background-color: rgba(128, 128, 128, 0.328);
+  color: green;
 }
 .social-icons {
   display: none;
 }
 
-
-  .links { height: 0;
+.links {
+  height: 0;
   overflow: hidden;
-  transition: all 0.3s ease; }
+  transition: all 0.3s ease;
+}
 
 .show-links {
   height: 10rem;
@@ -203,7 +201,7 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: none;
   }
   .links {
-    height: auto;/*important to add this to the media quiery for the links*/
+    height: auto; /*important to add this to the media quiery for the links*/
     display: flex;
   }
   .links a {
@@ -226,5 +224,13 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   /*This changes and controls the social media icons when they are hovered over they will change to the color down below*/
   .social-icons a:hover {
     color: black;
+  }
+  /*I added this code again for the media query and I am not sure if I did this correctly.*/
+  .container-maincontent {
+    padding: 50px 200px 50px 200px; /* Add padding to the container */
+  }
+  .container-maincontent > * {
+    margin: 0 10px; /* Add margin between flex items */
+    flex: 1; /* Distribute remaining space equally among flex items */
   }
 }
