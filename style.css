@@ -23,16 +23,16 @@ h2,
 h3,
 h4 {
   letter-spacing: 1px;
-  text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto Serif", serif;
 }
 h1 {
   font-size: 3rem;
 }
 h2 {
   font-size: 2rem;
+  font-family: "Roboto", sans-serif;
 }
 h3 {
   font-size: 1.25rem;
@@ -43,14 +43,15 @@ h4 {
 p {
   margin-bottom: 1.25rem;
   color: black;
-  padding: 5px;
 }
+
 @media screen and (min-width: 800px) {
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    padding-top: 40px;
   }
   h3 {
     font-size: 1.75rem;
@@ -70,8 +71,8 @@ p {
 }
 /* here is for the iframe video on the project page*/
 .video-container {
-  width: 800px; /* Adjust width as needed */
-  height: 450px; /* Adjust height as needed */
+  width: 800px;
+  height: 450px;
 }
 
 .video-container {
@@ -86,22 +87,24 @@ iframe {
 /*  this is for the flexbox container on the mainpage  */
 .container-maincontent {
   display: flex;
-  flex-direction: column; /* Arrange children vertically */
-  align-items: left; /* Center children horizontally */
-  padding: 20px; /* Add padding to the container */
+  flex-direction: column; 
+  align-items: left; 
+  padding: 20px; 
+  background-color: rgb(225, 195, 203);
+  max-width: 100%;
 }
 .container-maincontent {
-  justify-content: center; /* Center children horizontally */
+  justify-content: center;
 }
 
 .container-maincontent > * {
-  margin: 0 10px; /* Add margin between flex items */
-  flex: 1; /* Distribute remaining space equally among flex items */
+  margin: 0 10px; 
+  flex: 1; 
 }
 
 .hamburger-menu {
   font-weight: bold;
-  color: rgb(57, 55, 55);
+  color: rgb(0, 0, 0);
 }
 
 /*  global classes */
@@ -144,7 +147,7 @@ nav {
 }
 .nav-toggle {
   font-size: 1.5rem;
-  color: #66cc99;
+  color: black;
   background: transparent;
   border-color: transparent;
   transition: all 0.3s ease;
@@ -152,7 +155,7 @@ nav {
 }
 /* THIS CONTROLS THE HAMBURGER ICONS COLOR WHEN YOU HOVER OVER IT CHANGES TO BLACK AND IT ALSO ROTATES THE ICON TO VERTICAL LINES*/
 .nav-toggle:hover {
-  color: black;
+  color: rgb(225, 195, 203);
   transform: rotate(90deg);
 }
 .logo {
@@ -168,9 +171,10 @@ nav {
   padding: 0.5rem 1rem;
   transition: all 0.3s ease;
 }
+/*this controls the links when they are hovered over in the header/nav*/
 .links a:hover {
   background-color: rgba(128, 128, 128, 0.328);
-  color: green;
+  color: pink;
 }
 .social-icons {
   display: none;
@@ -218,19 +222,68 @@ nav {
   /*This changes and controls the social media icons*/
   .social-icons a {
     margin: 0 0.5rem;
-    color: #47cc33;
-    transition: var(--transition);
+    color: black;
+    transition: all 0.3s ease;
   }
   /*This changes and controls the social media icons when they are hovered over they will change to the color down below*/
   .social-icons a:hover {
-    color: black;
+    color: rgb(225, 195, 203);
   }
   /*I added this code again for the media query and I am not sure if I did this correctly.*/
   .container-maincontent {
-    padding: 50px 200px 50px 200px; /* Add padding to the container */
+    padding: 50px 200px 50px 200px;
+    max-width: 100%; /*This will prevent the content inside of the container from spilling out or overflowing*/
+    box-sizing: border-box;
+    overflow: hidden;
   }
   .container-maincontent > * {
-    margin: 0 10px; /* Add margin between flex items */
-    flex: 1; /* Distribute remaining space equally among flex items */
+    margin: 0 10px; 
+    flex: 1;
+  }
+
+  .greetings-paragraph {
+    padding: 50px 5px 5px 5px;
+  }
+
+  .nav-photo {
+    padding: 10px 0px;
+  }
+
+  h2 {
+    padding: 50px 0px 10px 0px;
+  }
+
+  p {
+    padding-bottom: 20px;
+  }
+  .links a:hover {
+    text-decoration: underline solid black;
+    color: pink;
+  }
+  .video-container {
+    width: 800px;
+    height: 450px;
+    padding: 50px;
+  }
+  .tutorial-maincontainer {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    background-color: rgb(228, 226, 221);
+  }
+  .container-messagemain {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    align-items: center; 
+    background-color: rgb(228, 226, 221);
+    max-width: 100%;
+    height: 400px;
+    background-image: url(images/background-photo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .focus {
+    font-weight: bold;
   }
 }
